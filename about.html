@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Yummylicious</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #fff8f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+        
+        h1 {
+            color: #ee630c;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .tagline {
+            color: #d35400;
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+        
+        .about-content {
+            background-color: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.1);
+            margin-bottom: 30px;
+            border: 1px solid #ffeaa7;
+        }
+        
+        h2 {
+            color: #fa6f0b;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ffeaa7;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            background-color: #fff5e6;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ee6d0a;
+            margin: 25px 0;
+        }
+        
+        .highlight p {
+            margin-bottom: 0;
+            font-weight: 600;
+            color: #f14e08;
+        }
+        
+        .values {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        
+        .value-item {
+            flex: 0 0 48%;
+            background-color: #fff5e6;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-top: 3px solid #e74c3c;
+        }
+        
+        .value-item h3 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .university-focus {
+            background-color: #f9f4ff;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 2px dashed #9b59b6;
+        }
+        
+        .university-focus h3 {
+            color: #8e44ad;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ffeaa7;
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+        
+        .contact-info {
+            margin-top: 10px;
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 600px) {
+            .value-item {
+                flex: 0 0 100%;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                padding: 25px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>YUMMYLICIOUS</h1>
+        <p class="tagline">Order Fast. Study More. Wait Less.</p>
+    </header>
+    
+    <main>
+        <section class="about-content">
+            <h2>Our Mission</h2>
+            <p>Yummylicious was created by students, for students. We understand the precious time lost waiting in long lines at campus food outlets. Every minute spent waiting is a minute taken away from studying, assignments, or much-needed rest.</p>
+            
+            <div class="highlight">
+                <p>Our mission is simple: Reduce waiting time for university students at campus food outlets so they can use that valuable time for studying instead.</p>
+            </div>
+            
+            <h2>How It Works</h2>
+            <p>1. Browse our selection of campus food outlets and their menus</p>
+            <p>2. Place your order in advance from anywhere on campus</p>
+            <p>3. Receive a pickup time notification</p>
+            <p>4. Walk in, grab your ready order, and get back to what matters</p>
+            
+            <div class="university-focus">
+                <h3>Designed for University Life</h3>
+                <p>We work directly with campus food vendors to streamline ordering. No payment gateway needed – just order ahead and pay when you pick up. Perfect for busy students during exams, between classes, or late-night study sessions.</p>
+            </div>
+            
+            <h2>Our Values</h2>
+            <div class="values">
+                <div class="value-item">
+                    <h3>Time-Saving</h3>
+                    <p>We believe every minute saved from waiting in line is a minute gained for learning and growth.</p>
+                </div>
+                
+                <div class="value-item">
+                    <h3>Student-First</h3>
+                    <p>Created by students to address real campus challenges we face every day.</p>
+                </div>
+                
+                <div class="value-item">
+                    <h3>Simple Process</h3>
+                    <p>No complicated payment systems. Just order ahead and pick up when ready.</p>
+                </div>
+                
+                <div class="value-item">
+                    <h3>Campus-Focused</h3>
+                    <p>Working exclusively with university food outlets to serve the student community better.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025+ YUMMYLICIOUS. Made for students, by students.</p>
+        <p class="contact-info">Contact us: kushwahaaadi007@gmail.com | Campus extension: 555-YUMMY</p>
+        <p>Follow us on campus social media for daily specials and updates!</p>
+    </footer>
+</body>
+</html><!-- Shopping Cart -->
+<div class="shopping-cart" id="shoppingCart">
+    <div class="cart-header">
+        <h2>Your Order</h2>
+        <span class="close-cart" id="closeCart">&times;</span>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <!-- Cart items will be added here dynamically -->
+        <div class="empty-cart-message" id="emptyCartMessage">
+            <p>Your cart is empty</p>
+            <p>Add items from the menu</p>
+        </div>
+    </div>
+    <div class="cart-summary">
+        <div class="cart-total">
+            <span>Subtotal:</span>
+            <span id="cartSubtotal">₹ 0</span>
+        </div>
+        <div class="cart-total">
+            <span>Tax (5%):</span>
+            <span id="cartTax">₹ 0</span>
+        </div>
+        <div class="cart-total grand-total">
+            <span>Total:</span>
+            <span id="cartTotal">₹ 0</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+    </div>
+</div>
+
+<!-- Cart Icon in Navbar -->
+<div class="cart-icon-container" id="cartIconContainer">
+    <div class="cart-icon" id="cartIcon">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+</div><!-- Shopping Cart -->
+<div class="shopping-cart" id="shoppingCart">
+    <div class="cart-header">
+        <h2>Your Order</h2>
+        <span class="close-cart" id="closeCart">&times;</span>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <!-- Cart items will be added here dynamically -->
+        <div class="empty-cart-message" id="emptyCartMessage">
+            <p>Your cart is empty</p>
+            <p>Add items from the menu</p>
+        </div>
+    </div>
+    <div class="cart-summary">
+        <div class="cart-total">
+            <span>Subtotal:</span>
+            <span id="cartSubtotal">₹ 0</span>
+        </div>
+        <div class="cart-total">
+            <span>Tax (5%):</span>
+            <span id="cartTax">₹ 0</span>
+        </div>
+        <div class="cart-total grand-total">
+            <span>Total:</span>
+            <span id="cartTotal">₹ 0</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+    </div>
+</div> 
+
+<!-- Cart Icon in Navbar -->
+<div class="cart-icon-container" id="cartIconContainer">
+    <div class="cart-icon" id="cartIcon">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+</div> 

@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YUMMYLICIOUS - Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main" id="mainPage">
+<div class="navbar">
+<div class="icon">
+<h2 class="logo">YUMMYLICIOUS</h2>
+</div>
+
+<div class="menu">
+<ul>
+<li><a href="index.html" class="active">Home</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="#" id="contact-link">Contact Us</a></li>
+<li><a href="#" id="cart-link" onclick="openCart()">Cart (<span id="cart-count">0</span>)</a></li>
+</ul>
+</div>
+</div>
+
+<div class="left-hero-container">
+<h1>FOOD COURTS</h1>
+
+<div class="cards-row">
+<div class="card">
+<div class="hero-rectangle-box">
+<img src="Southern Stories.JPG" alt="Southern Stories">
+</div>
+<div class="foodcourt-info">
+<h3 class="foodcourt-name">Southern Stories</h3>
+<p class="foodcourt-cuisine">Southern Cuisine • American</p>
+<p class="foodcourt-description">Authentic Southern comfort food with a modern twist. Our specialties include fried chicken, biscuits, and homemade pies.</p>
+</div>
+<button class="hero-btn" onclick="showOrderPage('Southern Stories')">Order Now</button>
+</div>
+
+<div class="card">
+<div class="hero-rectangle-box">
+<img src="SNAPEATS.jpeg" alt="SnapEats">
+</div>
+<div class="foodcourt-info">
+<h3 class="foodcourt-name">SnapEats</h3>
+<p class="foodcourt-cuisine">Fast Food • Snacks</p>
+<p class="foodcourt-description">Quick bites and delicious snacks perfect for on-the-go dining. Try our signature burgers and loaded fries!</p>
+</div>
+<button class="hero-btn" onclick="showOrderPage('SnapEats')">Order Now</button>
+</div>
+
+<div class="card">
+<div class="hero-rectangle-box">
+<img src="house of chow.jpg" alt="House of Chow">
+</div>
+<div class="foodcourt-info">
+<h3 class="foodcourt-name">House of Chow</h3>
+<p class="foodcourt-cuisine">Chinese • Asian Fusion</p>
+<p class="foodcourt-description">Experience the rich flavors of authentic Chinese cuisine with our chef's special recipes and fresh ingredients.</p>
+</div>
+<button class="hero-btn" onclick="showOrderPage('House of Chow')">Order Now</button>
+</div>
+</div>
+
+<div class="cards-row">
+<div class="card">
+<div class="hero-rectangle-box">
+<img src="Bistro.JPG" alt="Italian Bistro">
+</div>
+<div class="foodcourt-info">
+<h3 class="foodcourt-name"> Bistro</h3>
+<p class="foodcourt-cuisine">Italian • Mediterranean</p>
+<p class="foodcourt-description">Classic Italian dishes made with love. From wood-fired pizzas to homemade pasta, taste Italy in every bite.</p>
+</div>
+<button class="hero-btn" onclick="showOrderPage('Italian Bistro')">Order Now</button>
+</div>
+
+<div class="card">
+<div class="hero-rectangle-box">
+<img src="Quench.JPG" alt="Burger Factory">
+</div>
+<div class="foodcourt-info">
+<h3 class="foodcourt-name">Quench</h3>
+<p class="foodcourt-cuisine">Burgers • American</p>
+<p class="foodcourt-description">Gourmet burgers crafted with premium ingredients. Build your own burger or try one of our signature creations.</p>
+</div>
+<button class="hero-btn" onclick="showOrderPage('Burger Factory')">Order Now</button>
+</div>
+
+<div class="card">
+<div class="hero-rectangle-box">
+<img src="Hotspot.JPG" alt="Sushi Bar">
+</div>
+<div class="foodcourt-info">
+<h3 class="foodcourt-name">Maggie Hotspot </h3>
+<p class="foodcourt-cuisine">Noodles • Refreshments</p>
+<p class="foodcourt-description">Fresh sushi and sashimi prepared by expert chefs. Experience the art of Japanese cuisine with our premium selections.</p>
+</div>
+<button class="hero-btn" onclick="showOrderPage('Sushi Bar')">Order Now</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="order-page" id="southernStoriesPage">
+<div class="order-header">
+<button class="back-btn" onclick="showMainPage()">← Back</button>
+<h2 class="order-title">Southern Stories</h2>
+<button class="view-cart-btn" onclick="openCart()">View Cart</button>
+</div>
+<div class="dishes-container"></div>
+</div>
+
+<div class="order-page" id="snapEatsPage">
+<div class="order-header">
+<button class="back-btn" onclick="showMainPage()">← Back</button>
+<h2 class="order-title">SnapEats</h2>
+<button class="view-cart-btn" onclick="openCart()">View Cart</button>
+</div>
+<div class="dishes-container"></div>
+</div>
+
+<div class="order-page" id="houseOfChowPage">
+<div class="order-header">
+<button class="back-btn" onclick="showMainPage()">← Back</button>
+<h2 class="order-title">House of Chow</h2>
+<button class="view-cart-btn" onclick="openCart()">View Cart</button>
+</div>
+<div class="dishes-container"></div>
+</div>
+
+<div class="order-page" id="italianBistroPage">
+<div class="order-header">
+<button class="back-btn" onclick="showMainPage()">← Back</button>
+<h2 class="order-title">Bistro</h2>
+<button class="view-cart-btn" onclick="openCart()">View Cart</button>
+</div>
+<div class="dishes-container"></div>
+</div>
+
+<div class="order-page" id="burgerFactoryPage">
+<div class="order-header">
+<button class="back-btn" onclick="showMainPage()">← Back</button>
+<h2 class="order-title">Quench</h2>
+<button class="view-cart-btn" onclick="openCart()">View Cart</button>
+</div>
+<div class="dishes-container"></div>
+</div>
+
+<div class="order-page" id="sushiBarPage">
+<div class="order-header">
+<button class="back-btn" onclick="showMainPage()">← Back</button>
+<h2 class="order-title">Maggie Hotspot</h2>
+<button class="view-cart-btn" onclick="openCart()">View Cart</button>
+</div>
+<div class="dishes-container"></div>
+</div>
+
+<div class="contact-popup" id="contactPopup">
+<div class="contact-form">
+<div class="form-header">
+<h2>Contact Us</h2>
+<span class="close-btn" id="closePopup">&times;</span>
+</div>
+<form id="contactForm" action="https://formsubmit.co/kushwahaaadi007@gmail.com" method="POST">
+<div class="form-group">
+<label for="name">Your Name</label>
+<input type="text" id="name" name="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="query">Your Query</label>
+<textarea id="query" name="query" rows="5" required></textarea>
+</div>
+<input type="hidden" name="_subject" value="New Contact Form Submission">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<button type="submit" class="submit-btn">Send Message</button>
+</form>
+</div>
+</div>
+
+<div class="success-message" id="successMessage">
+<div class="message-content">
+<span class="close-success">&times;</span>
+<h3>Thank You!</h3>
+<p>Your message has been sent successfully. We'll get back to you soon!</p>
+</div>
+</div>
+
+<div class="cart-popup" id="cartPopup">
+<div class="cart-box">
+<div class="form-header">
+<h2>Your Bill</h2>
+<span class="close-btn" id="closeCart">&times;</span>
+</div>
+
+<div class="cart-items-container">
+<table class="cart-table">
+<thead>
+<tr>
+<th>Item</th>
+<th>Price</th>
+<th>Qty</th>
+<th>Total</th>
+<th></th>
+</tr>
+</thead>
+<tbody id="cartTableBody">
+</tbody>
+</table>
+<div id="emptyCartMessage" style="text-align: center; padding: 20px; color: #aaa;">
+Your cart is empty.
+</div>
+</div>
+
+<div class="cart-footer">
+<div class="grand-total">
+<span>Grand Total:</span>
+<span id="grandTotalValue">₹ 0</span>
+</div>
+<button class="checkout-btn" onclick="checkout()">Proceed to Pay</button>
+</div>
+</div>
+</div>
+
+<script>
+// Global Cart Array
+let cart = [];
+
+// Food Court Data
+const foodCourts = {
+'Southern Stories': {
+pageId: 'southernStoriesPage',
+dishes: [
+{ name: 'Plain Dosa', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Masala Dosa', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Rava Dosa', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Rava Onion/Masala Dosa', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Podi Butter Masala Dosa', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Paper/Mysore Masala Dosa', price: '₹ 110', rating: '★★★★★', image: '' },
+{ name: 'Ghee Roast Masala Dosa', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Cheese/Paneer Dosa', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Tomato Onion Uttapam', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Veg Uttapam', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Paneer Uttapam', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Poori Bhaji', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Malabar Parotta - Veg Kurma', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Malabar Parotta - Paneer Bhurji', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Idli Sambhar', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Masala/Vegetable Idli', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Vada Sambar', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Dahi Vada', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Dal Vada/Upma/Poha', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Lemon/Sambar Rice', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Tomato/Tamarind Rice', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Curd Rice', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Hyderabadi Veg Rice', price: '₹ 150', rating: '★★★★★', image: '' },
+{ name: 'Rasam', price: '₹ 50', rating: '★★★★★', image: '' },
+{ name: 'Filter Coffee', price: '₹ 40', rating: '★★★★★', image: '' },
+{ name: 'Cold Coffee', price: '₹ 70', rating: '★★★★★', image: '' },
+]
+},
+'SnapEats': {
+pageId: 'snapEatsPage',
+dishes: [
+{ name: 'Cappuccino', price: '₹ 49', rating: '★★★★☆', image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1098&q=80' },
+{ name: 'Hot Coffee', price: '₹ 49', rating: '★★★★★', image: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80' },
+{ name: 'Hot Chocolate', price: '₹ 59', rating: '★★★★☆', image: 'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80' },
+{ name: 'Adrak Chai', price: '₹ 10 ', rating: '★★★★★', image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80' },
+{ name: 'Adrak Chai-Kulhad', price: '₹ 20 ', rating: '★★★★★', image: '' },
+{ name: 'Veg Sandwich', price: '₹ 69 ', rating: '★★★★★', image: '' },
+{ name: 'cheese sandwich', price: '₹ 99 ', rating: '★★★★★', image: '' },
+{ name: 'paneer tikka', price: '₹ 99 ', rating: '★★★★★', image: '' },
+{ name: 'chicken tikka', price: '₹ 129 ', rating: '★★★★★', image: '' },
+{ name: 'seekh kabab', price: '₹ 129 ', rating: '★★★★★', image: '' },
+{ name: 'veg burger', price: '₹ 59 ', rating: '★★★★★', image: '' },
+{ name: 'peppy paneer burger', price: '₹ 109 ', rating: '★★★★★', image: '' },
+{ name: 'egg & mayo burger', price: '₹ 99 ', rating: '★★★★★', image: '' },
+{ name: 'chicken burger', price: '₹ 129 ', rating: '★★★★★', image: '' },
+{ name: 'malai paneer tikka', price: '₹ 249 ', rating: '★★★★★', image: '' },
+{ name: 'malai soya chap', price: '₹ 199 ', rating: '★★★★★', image: '' },
+{ name: 'tandoori mushroom', price: '₹ 199 ', rating: '★★★★★', image: '' },
+{ name: 'chicken tikka', price: '₹ 299 ', rating: '★★★★★', image: '' },
+{ name: 'seekh kabab-chicken', price: '₹ 299 ', rating: '★★★★★', image: '' },
+{ name: 'seekh kebab-mutton', price: '₹ 349 ', rating: '★★★★★', image: '' },
+{ name: 'tandoori chicken half', price: '₹ 199 ', rating: '★★★★★', image: '' },
+{ name: 'tandoori chicken full', price: '₹ 349 ', rating: '★★★★★', image: '' },
+{ name: 'laccha parantha(1pc)', price: '₹ 59 ', rating: '★★★★★', image: '' },
+{ name: 'garlic naan', price: '₹ 59 ', rating: '★★★★★', image: '' },
+{ name: 'butter naan', price: '₹ 59 ', rating: '★★★★★', image: '' },
+{ name: 'chicken keema naan', price: '₹ 139 ', rating: '★★★★★', image: '' },
+{ name: 'mutton keema naan', price: '₹ 199 ', rating: '★★★★★', image: '' },
+{ name: 'chicken tangdi(4pcs)', price: '₹ 249 ', rating: '★★★★★', image: '' },
+{ name: 'Peri Peri Fries', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Potato Wedges', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Sweet Corn', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Crispy Corn', price: '₹ 129', rating: '★★★★★', image: '' },
+{ name: 'Crispy Chicken', price: '₹ 159', rating: '★★★★★', image: '' },
+{ name: 'Macroni - Veg', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Macroni - Chicken', price: '₹ 199', rating: '★★★★★', image: '' },
+{ name: 'Pasta - Veg', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Pasta - Chicken', price: '₹ 199', rating: '★★★★★', image: '' },
+{ name: 'Honey Chilly Potato', price: '₹ 129', rating: '★★★★★', image: '' },
+{ name: 'Veg Manchurian Dry', price: '₹ 129', rating: '★★★★★', image: '' },
+{ name: 'Chicken Manchurian Dry', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Chilly Paneer Dry', price: '₹ 159', rating: '★★★★★', image: '' },
+{ name: 'Chilly Chicken Dry', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Mushroom Chilly Dry', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Tomato Soup', price: '₹ 79', rating: '★★★★★', image: '' },
+{ name: 'Vegetable Soup', price: '₹ 79', rating: '★★★★★', image: '' },
+{ name: 'Manchow Soup', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Chicken Soup', price: '₹ 119', rating: '★★★★★', image: '' },
+{ name: 'Veg Momos Steamed (8 Pcs)', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Veg Momos Fried (8 Pcs)', price: '₹ 119', rating: '★★★★★', image: '' },
+{ name: 'Paneer Momos Steamed (8 Pcs)', price: '₹ 119', rating: '★★★★★', image: '' },
+{ name: 'Paneer Momos Fried (8 Pcs)', price: '₹ 129', rating: '★★★★★', image: '' },
+{ name: 'Chicken Momos Steamed (8 Pcs)', price: '₹ 129', rating: '★★★★★', image: '' },
+{ name: 'Chicken Momos Fried (8 Pcs)', price: '₹ 139', rating: '★★★★★', image: '' },
+{ name: 'Veg Cigar Rolls', price: '₹ 119', rating: '★★★★★', image: '' },
+{ name: 'Chicken Cigar Rolls', price: '₹ 139', rating: '★★★★★', image: '' },
+{ name: 'Pav Bhaji', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Chole Bhature', price: '₹ 89', rating: '★★★★★', image: '' },
+{ name: 'Paneer Bread Pakora', price: '₹ 49', rating: '★★★★★', image: '' },
+{ name: 'Classic Bread Omellette', price: '₹ 79', rating: '★★★★★', image: '' },
+{ name: 'Cheese Bread Omellette', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Chicken Bread Omellette', price: '₹ 129', rating: '★★★★★', image: '' },
+{ name: 'Vada Pao', price: '₹ 49', rating: '★★★★★', image: '' },
+{ name: 'Boiled Chicken', price: '₹ 199', rating: '★★★★★', image: '' },
+{ name: 'Chicken Salad', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Cold Coffee', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Iced Americano', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Iced Cappuccino', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Coffee Frappe', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Mocha Frappe', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Hazel Frappe', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Oreo Frappe', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Fresh Lime Soda', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Green Apple Soda', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Green Iced Tea', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Masala Lemonade', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Mint Mojito', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Blue Lagoon', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Pineapple Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Strawberry Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Choco Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Rich Mango Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'O-O- Oreo Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Butter Scotch Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Kitkat Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Chocolate Almond Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Brownie Blast Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Veg Kathi Roll', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Paneer Kathi Roll', price: '₹ 119', rating: '★★★★★', image: '' },
+{ name: 'Paneer Makhani Roll', price: '₹ 139', rating: '★★★★★', image: '' },
+{ name: 'Paneer Schezwan Roll', price: '₹ 129', rating: '★★★★★', image: '' },
+{ name: 'Noodle Roll', price: '₹ 89', rating: '★★★★★', image: '' },
+{ name: 'Egg Roll', price: '₹ 89', rating: '★★★★★', image: '' },
+{ name: 'Chicken Tikka Roll', price: '₹ 149', rating: '★★★★★', image: '' },
+{ name: 'Chicken Achari Roll', price: '₹ 129', rating: '★★★★★', image: '' },
+{ name: 'Chicken Egg Roll', price: '₹ 169', rating: '★★★★★', image: '' },
+{ name: 'Chicken Shawarma Roll', price: '₹ 159', rating: '★★★★★', image: '' },
+{ name: 'Chicken Kebab Roll', price: '₹ 129', rating: '★★★★★', image: '' },
+{ name: 'Mutton Kebab Roll', price: '₹ 189', rating: '★★★★★', image: '' },
+{ name: 'White Pasta', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Red Pasta', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Mix Pasta', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Cheese Pasta', price: '₹ 139', rating: '★★★★★', image: '' },
+{ name: 'Chicken Pasta', price: '₹ 149', rating: '★★★★★', image: '' },
+{ name: 'Aloo Pyaz Parantha with Curd', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Paneer Parantha with Curd', price: '₹ 99', rating: '★★★★★', image: '' },
+{ name: 'Egg Parantha with Curd', price: '₹ 119', rating: '★★★★★', image: '' },
+{ name: 'Chicken Keema Parantha with Curd', price: '₹ 139', rating: '★★★★★', image: '' },
+{ name: 'Veg Combo (Rice/Rajma/Chole)', price: '₹ 89', rating: '★★★★★', image: '' },
+{ name: 'Rice & Egg Curry Combo', price: '₹ 149', rating: '★★★★★', image: '' },
+{ name: 'Rice & Paneer Combo', price: '₹ 149', rating: '★★★★★', image: '' },
+{ name: 'Chicken Curry (2 Pcs) with Rice/Parantha', price: '₹ 159', rating: '★★★★★', image: '' },
+{ name: 'Mutton Curry (2 Pcs) with Rice/Parantha', price: '₹ 259', rating: '★★★★★', image: '' },
+{ name: 'Chicken Biryani with Sallan', price: '₹ 299', rating: '★★★★★', image: '' },
+{ name: 'Premium Thali - Veg', price: '₹ 199', rating: '★★★★★', image: '' },
+{ name: 'Premium Thali - Non Veg', price: '₹ 299', rating: '★★★★★', image: '' },
+{ name: 'Hakka Noodles', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Hakka Noodles + Veg Manchurian', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Hakka Noodles + Chilly Chicken', price: '₹ 299', rating: '★★★★★', image: '' },
+{ name: 'Fried Rice + Chilly Paneer', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Fried Rice + Veg Manchurian', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Fried Rice + Chilly Chicken', price: '₹ 299', rating: '★★★★★', image: '' },
+{ name: 'Fried Rice - Veg', price: '₹ 149', rating: '★★★★★', image: '' },
+{ name: 'Fried Rice - Chicken', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Hakka Noodles - Veg', price: '₹ 149', rating: '★★★★★', image: '' },
+{ name: 'Hakka Noodles - Chicken', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Schezwan Fried Rice + Paneer', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Schezwan Fried Rice + Chilly Chicken', price: '₹ 299', rating: '★★★★★', image: '' },
+{ name: 'Chicken Lollipop (4)', price: '₹ 299', rating: '★★★★★', image: '' },
+{ name: 'Chinese Platter - Veg', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Chinese Platter - Non Veg', price: '₹ 349', rating: '★★★★★', image: '' },
+]
+},
+'House of Chow': {
+pageId: 'houseOfChowPage',
+dishes: [
+{ name: 'Veg Fried Rice (Half)', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Veg Fried Rice (Full)', price: '₹ 140', rating: '★★★★★', image: '' },
+{ name: 'Chicken Fried Rice (Half)', price: '₹ 140', rating: '★★★★★', image: '' },
+{ name: 'Chicken Fried Rice (Full)', price: '₹ 220', rating: '★★★★★', image: '' },
+{ name: 'Paneer Fried Rice (Half)', price: '₹ 140', rating: '★★★★★', image: '' },
+{ name: 'Paneer Fried Rice (Full)', price: '₹ 230', rating: '★★★★★', image: '' },
+{ name: 'Egg Fried Rice (Half)', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Egg Fried Rice (Full)', price: '₹ 150', rating: '★★★★★', image: '' },
+{ name: 'Chilli Garlic Fried Rice (Half)', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Chilli Garlic Fried Rice (Full)', price: '₹ 160', rating: '★★★★★', image: '' },
+{ name: 'Chilli Garlic Noodle (Half)', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Chilli Garlic Noodle (Full)', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Chilli Garlic Chicken Noodles (Half)', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Chilli Garlic Chicken Noodles (Full)', price: '₹ 160', rating: '★★★★★', image: '' },
+{ name: 'Veg Hakka Noodles (Half)', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Veg Hakka Noodles (Full)', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Chicken Hakka Noodles (Half)', price: '₹ 150', rating: '★★★★★', image: '' },
+{ name: 'Chicken Hakka Noodles (Full)', price: '₹ 200', rating: '★★★★★', image: '' },
+{ name: 'Veg Chowmein (Half)', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Veg Chowmein (Full)', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Chicken Chowmein (Half)', price: '₹ 150', rating: '★★★★★', image: '' },
+{ name: 'Chicken Chowmein (Full)', price: '₹ 200', rating: '★★★★★', image: '' },
+{ name: 'Veg Singapore Noodles (Half)', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Veg Singapore Noodles (Full)', price: '₹ 140', rating: '★★★★★', image: '' },
+{ name: 'Chicken Singapore Noodles (Half)', price: '₹ 180', rating: '★★★★★', image: '' },
+{ name: 'Chicken Singapore Noodles (Full)', price: '₹ 230', rating: '★★★★★', image: '' },
+{ name: 'Veg Chopsuey', price: '₹ 239', rating: '★★★★★', image: '' },
+{ name: 'Chicken Chopsuey', price: '₹ 299', rating: '★★★★★', image: '' },
+{ name: 'Crispy Chilli Potato (Half)', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Crispy Chilli Potato (Full)', price: '₹ 115', rating: '★★★★★', image: '' },
+{ name: 'Veg Spring Roll', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Chilli Paneer (Half)', price: '₹ 115', rating: '★★★★★', image: '' },
+{ name: 'Chilli Paneer (Full)', price: '₹ 150', rating: '★★★★★', image: '' },
+{ name: 'Bhel Puri (Half)', price: '₹ 50', rating: '★★★★★', image: '' },
+{ name: 'Bhel Puri (Full)', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Crispy Corns (Half)', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Crispy Corns (Full)', price: '₹ 180', rating: '★★★★★', image: '' },
+{ name: 'Veg Salt And Pepper (Half)', price: '₹ 149', rating: '★★★★★', image: '' },
+{ name: 'Veg Salt And Pepper (Full)', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Salted Fries (Half)', price: '₹ 74', rating: '★★★★★', image: '' },
+{ name: 'Salted Fries (Full)', price: '₹ 147', rating: '★★★★★', image: '' },
+{ name: 'Peri Peri Fries (Half)', price: '₹ 84', rating: '★★★★★', image: '' },
+{ name: 'Peri Peri Fries (Full)', price: '₹ 155', rating: '★★★★★', image: '' },
+{ name: 'Cheese Fries (Half)', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Cheese Fries (Full)', price: '₹ 175', rating: '★★★★★', image: '' },
+{ name: 'Tandoori Fries (Half)', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Tandoori Fries (Full)', price: '₹ 175', rating: '★★★★★', image: '' },
+{ name: 'Cheese Baked Fries', price: '₹ 158', rating: '★★★★★', image: '' },
+{ name: 'Veg Steam Momos', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Veg Kurkure Momos', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Chicken Steam Momos', price: '₹ 119', rating: '★★★★★', image: '' },
+{ name: 'Chicken Kurkure Momos', price: '₹ 160', rating: '★★★★★', image: '' },
+{ name: 'Chilli Paneer Burger', price: '₹ 84', rating: '★★★★★', image: '' },
+{ name: 'Chinese Veg Burger', price: '₹ 68', rating: '★★★★★', image: '' },
+{ name: 'Chilli Garlic Veg Burger', price: '₹ 74', rating: '★★★★★', image: '' },
+{ name: 'Chilli Chicken Burger', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Add On: Cheese Slice', price: '₹ 12', rating: '★★★★★', image: '' },
+{ name: 'Add On: Cheese Burst', price: '₹ 40', rating: '★★★★★', image: '' },
+{ name: 'Veg Sandwich (Multigrain)', price: '₹ 74', rating: '★★★★★', image: '' },
+{ name: 'Veg Chilli Garlic Sandwich (Multigrain)', price: '₹ 84', rating: '★★★★★', image: '' },
+{ name: 'Chilli Paneer Sandwich (Multigrain)', price: '₹ 137', rating: '★★★★★', image: '' },
+{ name: 'Schezwan/Chilli Garlic Paneer (Multigrain)', price: '₹ 158', rating: '★★★★★', image: '' },
+{ name: 'Chilli Chicken Sandwich (Multigrain)', price: '₹ 147', rating: '★★★★★', image: '' },
+{ name: 'Schezwan/Chilli Garlic Chicken (Multigrain)', price: '₹ 168', rating: '★★★★★', image: '' },
+{ name: 'Veggie Wrap', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Salad Wrap', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Paneer Wrap', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Chilli Paneer Wrap', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Chicken Kabab Wrap', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Chilli Chicken Wrap', price: '₹ 140', rating: '★★★★★', image: '' },
+{ name: 'Veg Sandwich', price: '₹ 74', rating: '★★★★★', image: '' },
+{ name: 'Veg Chilli Garlic Sandwich', price: '₹ 84', rating: '★★★★★', image: '' },
+{ name: 'Chilli Paneer Sandwich', price: '₹ 137', rating: '★★★★★', image: '' },
+{ name: 'Schezwan/Chilli Garlic Paneer Sandwich', price: '₹ 158', rating: '★★★★★', image: '' },
+{ name: 'Chilli Chicken Sandwich', price: '₹ 147', rating: '★★★★★', image: '' },
+{ name: 'Schezwan/Chilli Garlic Chicken Sandwich', price: '₹ 168', rating: '★★★★★', image: '' },
+{ name: 'Chow Box (Veg)', price: '₹ 199', rating: '★★★★★', image: '' },
+{ name: 'Chow Box (Paneer)', price: '₹ 229', rating: '★★★★★', image: '' },
+{ name: 'Chow Box (Chicken)', price: '₹ 249', rating: '★★★★★', image: '' },
+{ name: 'Bento Box (Veg)', price: '₹ 299', rating: '★★★★★', image: '' },
+{ name: 'Bento Box (Paneer)', price: '₹ 329', rating: '★★★★★', image: '' },
+{ name: 'Bento Box (Chicken)', price: '₹ 349', rating: '★★★★★', image: '' },
+{ name: 'Veg Black Pepper (Half)', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Veg Black Pepper (Full)', price: '₹ 135', rating: '★★★★★', image: '' },
+{ name: 'Veg Chilli Soya (Half)', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Veg Chilli Soya (Full)', price: '₹ 135', rating: '★★★★★', image: '' },
+{ name: 'Veg Hot Garlic (Half)', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Veg Hot Garlic (Full)', price: '₹ 135', rating: '★★★★★', image: '' },
+{ name: 'Veg Kung Pao (Half)', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Veg Kung Pao (Full)', price: '₹ 135', rating: '★★★★★', image: '' },
+{ name: 'Veg Manchurian (Half)', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Veg Manchurian (Full)', price: '₹ 135', rating: '★★★★★', image: '' },
+{ name: 'Veg Thai Green Curry (Half)', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Veg Thai Green Curry (Full)', price: '₹ 135', rating: '★★★★★', image: '' },
+{ name: 'Veg Thai Red Curry (Half)', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Veg Thai Red Curry (Full)', price: '₹ 135', rating: '★★★★★', image: '' },
+{ name: 'Veg Schezwan (Half)', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Veg Schezwan (Full)', price: '₹ 135', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Black Pepper (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Black Pepper (Full)', price: '₹ 210', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Chilli Soya (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Chilli Soya (Full)', price: '₹ 210', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Hot Garlic (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Hot Garlic (Full)', price: '₹ 210', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Kung Pao (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Kung Pao (Full)', price: '₹ 210', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Manchurian (Half)', price: '₹ 167', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Manchurian (Full)', price: '₹ 220', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Thai Green Curry (Half)', price: '₹ 167', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Thai Green Curry (Full)', price: '₹ 220', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Thai Red Curry (Half)', price: '₹ 167', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Thai Red Curry (Full)', price: '₹ 220', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Schezwan (Half)', price: '₹ 167', rating: '★★★★★', image: '' },
+{ name: 'Non Veg Schezwan (Full)', price: '₹ 210', rating: '★★★★★', image: '' },
+{ name: 'Paneer Black Pepper (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Paneer Black Pepper (Full)', price: '₹ 205', rating: '★★★★★', image: '' },
+{ name: 'Paneer Chilli Soya (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Paneer Chilli Soya (Full)', price: '₹ 205', rating: '★★★★★', image: '' },
+{ name: 'Paneer Hot Garlic (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Paneer Hot Garlic (Full)', price: '₹ 205', rating: '★★★★★', image: '' },
+{ name: 'Paneer Kung Pao (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Paneer Kung Pao (Full)', price: '₹ 205', rating: '★★★★★', image: '' },
+{ name: 'Paneer Manchurian (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Paneer Manchurian (Full)', price: '₹ 231', rating: '★★★★★', image: '' },
+{ name: 'Paneer Thai Green Curry (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Paneer Thai Green Curry (Full)', price: '₹ 231', rating: '★★★★★', image: '' },
+{ name: 'Paneer Thai Red Curry (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Paneer Thai Red Curry (Full)', price: '₹ 231', rating: '★★★★★', image: '' },
+{ name: 'Paneer Schezwan (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Paneer Schezwan (Full)', price: '₹ 231', rating: '★★★★★', image: '' },
+{ name: 'Chicken Drumsticks (Half)', price: '₹ 137', rating: '★★★★★', image: '' },
+{ name: 'Chicken Drumsticks (Full)', price: '₹ 210', rating: '★★★★★', image: '' },
+{ name: 'Chicken Spring Roll', price: '₹ 137', rating: '★★★★★', image: '' },
+{ name: 'Chilli Chicken (Half)', price: '₹ 157', rating: '★★★★★', image: '' },
+{ name: 'Chilli Chicken (Full)', price: '₹ 210', rating: '★★★★★', image: '' },
+{ name: 'Chicken Shawarma (Half)', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Chicken Shawarma (Full)', price: '₹ 210', rating: '★★★★★', image: '' },
+{ name: 'Vanilla Shake', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Chocolate Shake', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Strawberry Shake', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Butter Scotch Shake', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Oreo Shake', price: '₹ 147', rating: '★★★★★', image: '' },
+{ name: 'Kit Kat Shake', price: '₹ 147', rating: '★★★★★', image: '' },
+{ name: 'Peanut Butter Shake', price: '₹ 147', rating: '★★★★★', image: '' },
+{ name: 'Nutella Crunch Shake', price: '₹ 168', rating: '★★★★★', image: '' },
+{ name: 'Ice Tea (Lemon/Peach)', price: '₹ 47', rating: '★★★★★', image: '' },
+{ name: 'Fresh Lime Soda', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Cold Coffee', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Hazelnut Cold Coffee', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Classic Mint Mojito', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Green Apple Mojito', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Passion Fruit Mojito', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Watermelon Mojito', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Vanilla Ice Cream (Single)', price: '₹ 50', rating: '★★★★★', image: '' },
+{ name: 'Vanilla Ice Cream (Double)', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Butterscotch Ice Cream (Single)', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Butterscotch Ice Cream (Double)', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Chocolate Ice Cream (Single)', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Chocolate Ice Cream (Double)', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Hot Chocolate Fudge', price: '₹ 130', rating: '★★★★★', image: '' },
+{ name: 'Brownie Sundae', price: '₹ 150', rating: '★★★★★', image: '' },
+]
+},
+'Italian Bistro': {
+pageId: 'italianBistroPage',
+dishes: [
+{ name: 'Adrak Chai (Small)', price: '₹ 11', rating: '★★★★★', image: '' },
+{ name: 'Adrak Chai (Regular)', price: '₹ 16', rating: '★★★★★', image: '' },
+{ name: 'Adrak Chai (Large)', price: '₹ 21', rating: '★★★★★', image: '' },
+{ name: 'Masala Chai (Small)', price: '₹ 16', rating: '★★★★★', image: '' },
+{ name: 'Masala Chai (Regular)', price: '₹ 21', rating: '★★★★★', image: '' },
+{ name: 'Masala Chai (Large)', price: '₹ 26', rating: '★★★★★', image: '' },
+{ name: 'Kadak Elaichi Chai (Small)', price: '₹ 16', rating: '★★★★★', image: '' },
+{ name: 'Kadak Elaichi Chai (Regular)', price: '₹ 21', rating: '★★★★★', image: '' },
+{ name: 'Kadak Elaichi Chai (Large)', price: '₹ 26', rating: '★★★★★', image: '' },
+{ name: 'Lemon Tea (Small)', price: '₹ 16', rating: '★★★★★', image: '' },
+{ name: 'Lemon Tea (Regular)', price: '₹ 21', rating: '★★★★★', image: '' },
+{ name: 'Lemon Tea (Large)', price: '₹ 26', rating: '★★★★★', image: '' },
+{ name: 'Hot / Black Coffee (Regular)', price: '₹ 45', rating: '★★★★★', image: '' },
+{ name: 'Hot / Black Coffee (Large)', price: '₹ 55', rating: '★★★★★', image: '' },
+{ name: 'Cold Coffee', price: '₹ 69', rating: '★★★★★', image: '' },
+{ name: 'Caramel / Hazelnut Coffee', price: '₹ 104', rating: '★★★★★', image: '' },
+{ name: 'Irish / Brownie Coffee', price: '₹ 147', rating: '★★★★★', image: '' },
+{ name: 'Veg Patty', price: '₹ 32', rating: '★★★★★', image: '' },
+{ name: 'Paneer Patty', price: '₹ 42', rating: '★★★★★', image: '' },
+{ name: 'Aloo Samosa', price: '₹ 20', rating: '★★★★★', image: '' },
+{ name: 'Kachori Sabji', price: '₹ 50', rating: '★★★★★', image: '' },
+{ name: 'Garlic Toast with Cheese', price: '₹ 68', rating: '★★★★★', image: '' },
+{ name: 'Exotic Garlic Toast', price: '₹ 79', rating: '★★★★★', image: '' },
+{ name: 'Aloo Tikki Sandwich', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Cheese Grilled Sandwich', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Cheese Pizza Grilled Sandwich', price: '₹ 126', rating: '★★★★★', image: '' },
+{ name: 'Cheese Corn Sandwich', price: '₹ 126', rating: '★★★★★', image: '' },
+{ name: 'Tandoori Soya Sandwich', price: '₹ 126', rating: '★★★★★', image: '' },
+{ name: 'Paneer Masala Sandwich', price: '₹ 126', rating: '★★★★★', image: '' },
+{ name: 'Paneer Makhani Sandwich', price: '₹ 147', rating: '★★★★★', image: '' },
+{ name: 'Veg Grilled Sandwich', price: '₹ 73', rating: '★★★★★', image: '' },
+{ name: 'Crispy Veg Sandwich', price: '₹ 94', rating: '★★★★★', image: '' },
+{ name: 'Jungle Paneer Sandwich', price: '₹ 94', rating: '★★★★★', image: '' },
+{ name: 'Crispy Paneer Sandwich', price: '₹ 104', rating: '★★★★★', image: '' },
+{ name: 'Veg Burger', price: '₹ 63', rating: '★★★★★', image: '' },
+{ name: 'Crispy Paneer Burger', price: '₹ 116', rating: '★★★★★', image: '' },
+{ name: 'Cheese Slice (Add-on)', price: '₹ 11', rating: '★★★★★', image: '' },
+{ name: 'Maharaja Burger', price: '₹ 140', rating: '★★★★★', image: '' },
+{ name: 'White Sauce Pasta', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Red Sauce Pasta', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Mix Sauce Pasta', price: '₹ 126', rating: '★★★★★', image: '' },
+{ name: 'Soya Chap Wrap', price: '₹ 116', rating: '★★★★★', image: '' },
+{ name: 'Paneer Tikka Wrap', price: '₹ 137', rating: '★★★★★', image: '' },
+{ name: 'Paneer Bhuji Wrap', price: '₹ 137', rating: '★★★★★', image: '' },
+{ name: 'Paneer Shawarma Wrap', price: '₹ 147', rating: '★★★★★', image: '' },
+{ name: 'Paneer Makhani Wrap', price: '₹ 152', rating: '★★★★★', image: '' },
+{ name: 'Paneer Schezwan Wrap', price: '₹ 152', rating: '★★★★★', image: '' },
+{ name: 'Egg Wrap (2 Eggs)', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Noodles Egg Wrap', price: '₹ 116', rating: '★★★★★', image: '' },
+{ name: 'Paneer Egg Wrap', price: '₹ 152', rating: '★★★★★', image: '' },
+{ name: 'Chicken Kabab Wrap', price: '₹ 189', rating: '★★★★★', image: '' },
+{ name: 'Chicken Tikka Wrap', price: '₹ 189', rating: '★★★★★', image: '' },
+{ name: 'Chicken Noodles Wrap', price: '₹ 189', rating: '★★★★★', image: '' },
+{ name: 'Chicken Makhani Wrap', price: '₹ 189', rating: '★★★★★', image: '' },
+{ name: 'Chicken Shawarma Wrap', price: '₹ 189', rating: '★★★★★', image: '' },
+{ name: 'Chicken Achari Wrap', price: '₹ 189', rating: '★★★★★', image: '' },
+{ name: 'Chicken Burger', price: '₹ 137', rating: '★★★★★', image: '' },
+{ name: 'Chicken Tikka Burger', price: '₹ 147', rating: '★★★★★', image: '' },
+{ name: 'Chicken Makhani Burger', price: '₹ 147', rating: '★★★★★', image: '' },
+{ name: 'Chicken Tikka Sandwich', price: '₹ 158', rating: '★★★★★', image: '' },
+{ name: 'Chicken Keema Sandwich', price: '₹ 158', rating: '★★★★★', image: '' },
+{ name: 'Chicken Schezwan Sandwich', price: '₹ 158', rating: '★★★★★', image: '' },
+{ name: 'Chicken Makhani Sandwich', price: '₹ 158', rating: '★★★★★', image: '' },
+{ name: 'Chicken Kebab Sandwich', price: '₹ 179', rating: '★★★★★', image: '' },
+{ name: 'Chicken Salami Sandwich', price: '₹ 179', rating: '★★★★★', image: '' },
+{ name: 'Tandoori Tikka Sandwich', price: '₹ 179', rating: '★★★★★', image: '' },
+{ name: 'Aloo Paratha', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Aloo Pyaz Paratha', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Pyaz Paratha', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Mix Paratha', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Paneer Paratha', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Egg Paratha', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Aloo Paneer Paratha', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Paneer Pyaz Paratha', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Gobhi Paratha', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Choly Bhature', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Poori Sabji', price: '₹ 50', rating: '★★★★★', image: '' },
+{ name: 'Samosa Choly', price: '₹ 50', rating: '★★★★★', image: '' },
+{ name: 'Bread Omelette', price: '₹ 63', rating: '★★★★★', image: '' },
+{ name: 'Masala Omelette', price: '₹ 58', rating: '★★★★★', image: '' },
+{ name: 'Plain Omelette', price: '₹ 58', rating: '★★★★★', image: '' },
+{ name: 'Cheese Omelette', price: '₹ 93', rating: '★★★★★', image: '' },
+]
+},
+'Burger Factory': {
+pageId: 'burgerFactoryPage',
+dishes: [
+{ name: 'Retro Aloo Tikki Burger', price: '₹ 55', rating: '★★★★★', image: '' },
+{ name: 'Spicy Chilly Lava Burger', price: '₹ 65', rating: '★★★★★', image: '' },
+{ name: 'Schezwan Burger', price: '₹ 65', rating: '★★★★★', image: '' },
+{ name: 'Classic Veggie Burger', price: '₹ 65', rating: '★★★★★', image: '' },
+{ name: 'Tandoori Crispy Burger', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Crunchy Paneer Burger', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Paneer Makani Burger', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Maharaja Burger', price: '₹ 120', rating: '★★★★★', image: '' },
+{ name: 'Add On Cheese Single', price: '₹ 15', rating: '★★★★★', image: '' },
+{ name: 'Classic Fries With Mayo', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Peri Peri Fries With Mayo', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Say Cheese Fries', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Fire n Cheese Fries', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Mexican Salsa Fries', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Paneer Makani Fries', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Arriabiata Pasta', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Alfredo Pasta', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Pink Sauce Pasta', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Aloo Wraps', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Tandoori Veggie Wrap', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Veg Paneer Wrap', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Mexican Salsa Wrap', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Chilli Cheese Garlic Bread', price: '₹ 110', rating: '★★★★★', image: '' },
+{ name: 'Power Packed Tangy Salad', price: '₹ 100', rating: '★★★★★', image: '' },
+{ name: 'Veg Masala Grilled Sandwich', price: '₹ 65', rating: '★★★★★', image: '' },
+{ name: 'Creamy Cheese Corn Sandwich', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Spicy Paneer & Jalapeno Sandwich', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Paneer Korma Sandwich', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Bombay Street Style Sandwich', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Veg Delight Sub', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Corn N Peas Sub', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Hara Bara Kabab Sub', price: '₹ 110', rating: '★★★★★', image: '' },
+{ name: 'Paneer Tikka Sub', price: '₹ 110', rating: '★★★★★', image: '' },
+{ name: 'Banana Shake', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Mango Shake', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Chocolate Shake', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Cold Coffee Shake', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Bubble Gum Shake', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Choc Oreo Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Hazelnut Cold Coffee Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Irish Cold Coffee Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Crunchy Caramel Shake', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Choco Waffle', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Strawberry Waffle', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Maple Waffle', price: '₹ 80', rating: '★★★★★', image: '' },
+{ name: 'Choco Oreo Waffle', price: '₹ 90', rating: '★★★★★', image: '' },
+{ name: 'Nutella Waffle', price: '₹ 95', rating: '★★★★★', image: '' },
+{ name: 'Blue Berry Mocktail', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Spicy Mango Mocktail', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Water Melon Juice', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Mosambi Juice', price: '₹ 70', rating: '★★★★★', image: '' },
+]
+},
+'Sushi Bar': {
+pageId: 'sushiBarPage',
+dishes: [
+{ name: 'Double Maggi', price: '₹ 45', rating: '★★★★★', image: '' },
+{ name: 'Butter Maggi', price: '₹ 50', rating: '★★★★★', image: '' },
+{ name: 'Oregano Maggi', price: '₹ 50', rating: '★★★★★', image: '' },
+{ name: 'Rosemary Maggi', price: '₹ 50', rating: '★★★★★', image: '' },
+{ name: 'Corn Maggi', price: '₹ 50', rating: '★★★★★', image: '' },
+{ name: 'Atta Masala Maggi', price: '₹ 55', rating: '★★★★★', image: '' },
+{ name: 'Onion Capsicum Maggi', price: '₹ 55', rating: '★★★★★', image: '' },
+{ name: 'Peri Peri Maggi', price: '₹ 55', rating: '★★★★★', image: '' },
+{ name: 'Fusion Maggi', price: '₹ 55', rating: '★★★★★', image: '' },
+{ name: 'Oats Masala Maggi', price: '₹ 55', rating: '★★★★★', image: '' },
+{ name: 'Butter Double Masala Maggi', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Cheese Maggi', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Butter Garlic Maggi', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Schezwan Maggi', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Chilli Garlic Maggi', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Masala Penne with Tomato', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Tomato Pazzta', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Cheese Macaroni', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Onion Capsicum Butter Maggi', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Corn and Cheese Maggi', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Chilli Garlic Cheese Maggi', price: '₹ 70', rating: '★★★★★', image: '' },
+{ name: 'Espresso', price: '₹ 20', rating: '★★★★★', image: '' },
+{ name: 'Cardamom Tea', price: '₹ 20', rating: '★★★★★', image: '' },
+{ name: 'Hot Milk', price: '₹ 20', rating: '★★★★★', image: '' },
+{ name: 'Masala Tea', price: '₹ 20', rating: '★★★★★', image: '' },
+{ name: 'Cappuccino', price: '₹ 30', rating: '★★★★★', image: '' },
+{ name: 'Café Latte', price: '₹ 30', rating: '★★★★★', image: '' },
+{ name: 'Ginger & Honey Tea', price: '₹ 30', rating: '★★★★★', image: '' },
+{ name: 'Assam Tea', price: '₹ 30', rating: '★★★★★', image: '' },
+{ name: 'Darjeeling Tea', price: '₹ 30', rating: '★★★★★', image: '' },
+{ name: 'Café Mocha', price: '₹ 35', rating: '★★★★★', image: '' },
+{ name: 'Hot Chocolate', price: '₹ 35', rating: '★★★★★', image: '' },
+{ name: 'Irish Cappuccino', price: '₹ 40', rating: '★★★★★', image: '' },
+{ name: 'Caramel Cappuccino', price: '₹ 40', rating: '★★★★★', image: '' },
+{ name: 'Hazelnut Cappuccino', price: '₹ 40', rating: '★★★★★', image: '' },
+{ name: 'Lemon Ice Tea (Regular)', price: '₹ 40', rating: '★★★★★', image: '' },
+{ name: 'Lemon Ice Tea (Large)', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Special Masala Lemon Ice Tea (Regular)', price: '₹ 45', rating: '★★★★★', image: '' },
+{ name: 'Special Masala Lemon Ice Tea (Large)', price: '₹ 85', rating: '★★★★★', image: '' },
+{ name: 'Frappe (Regular)', price: '₹ 55', rating: '★★★★★', image: '' },
+{ name: 'Frappe (Large)', price: '₹ 105', rating: '★★★★★', image: '' },
+{ name: 'Frappe Mocha', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Cold Chocolate', price: '₹ 60', rating: '★★★★★', image: '' },
+{ name: 'Irish Frappe', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Caramel Frappe', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Honey Frappe', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Chocolate Frappe', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Hazelnut Frappe', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Cookie Frappe', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Kit Kat Frappe', price: '₹ 75', rating: '★★★★★', image: '' },
+{ name: 'Munch Nuts Frappe', price: '₹ 75', rating: '★★★★★', image: '' },
+]
+}
+};
+
+// Initialize Events
+document.addEventListener('DOMContentLoaded', function() {
+// Contact Popup Logic
+const contactLink = document.getElementById('contact-link');
+const contactPopup = document.getElementById('contactPopup');
+const closePopup = document.getElementById('closePopup');
+const closeSuccess = document.querySelector('.close-success');
+const successMessage = document.getElementById('successMessage');
+
+// Cart Popup Logic
+const closeCartBtn = document.getElementById('closeCart');
+const cartPopup = document.getElementById('cartPopup');
+
+// Open/Close Contact
+if(contactLink) contactLink.addEventListener('click', (e) => { e.preventDefault(); contactPopup.style.display = 'flex'; });
+if(closePopup) closePopup.addEventListener('click', () => { contactPopup.style.display = 'none'; });
+if(closeSuccess) closeSuccess.addEventListener('click', () => { successMessage.style.display = 'none'; });
+
+// Close Cart
+if(closeCartBtn) closeCartBtn.addEventListener('click', () => { cartPopup.style.display = 'none'; });
+
+// Close Modals on Outside Click
+window.onclick = function(event) {
+if (event.target == contactPopup) contactPopup.style.display = 'none';
+if (event.target == cartPopup) cartPopup.style.display = 'none';
+if (event.target == successMessage) successMessage.style.display = 'none';
+}
+});
+
+// --- CART FUNCTIONALITY ---
+
+function addToCart(name, priceStr, qty) {
+// Convert "₹ 70" to integer 70
+const price = parseInt(priceStr.replace(/[^\d]/g, ''));
+const quantity = parseInt(qty);
+
+// Check if item already exists in cart
+const existingItem = cart.find(item => item.name === name);
+
+if (existingItem) {
+existingItem.qty += quantity;
+} else {
+cart.push({
+name: name,
+price: price,
+qty: quantity
+});
+}
+updateCartIcon();
+}
+
+function removeFromCart(index) {
+cart.splice(index, 1);
+updateCartModal();
+updateCartIcon();
+}
+
+function updateCartIcon() {
+const count = cart.reduce((sum, item) => sum + item.qty, 0);
+const cartCountEl = document.getElementById('cart-count');
+if(cartCountEl) cartCountEl.textContent = count;
+}
+
+function openCart() {
+const cartPopup = document.getElementById('cartPopup');
+cartPopup.style.display = 'flex';
+updateCartModal();
+}
+
+function updateCartModal() {
+const tbody = document.getElementById('cartTableBody');
+const emptyMsg = document.getElementById('emptyCartMessage');
+const grandTotalEl = document.getElementById('grandTotalValue');
+const table = document.querySelector('.cart-table');
+
+tbody.innerHTML = '';
+let grandTotal = 0;
+
+if (cart.length === 0) {
+emptyMsg.style.display = 'block';
+table.style.display = 'none';
+} else {
+emptyMsg.style.display = 'none';
+table.style.display = 'table';
+
+cart.forEach((item, index) => {
+const itemTotal = item.price * item.qty;
+grandTotal += itemTotal;
+
+const row = document.createElement('tr');
+row.innerHTML = `
+<td>${item.name}</td>
+<td>₹ ${item.price}</td>
+<td>${item.qty}</td>
+<td>₹ ${itemTotal}</td>
+<td><span class="remove-item" onclick="removeFromCart(${index})">&times;</span></td>
+`;
+tbody.appendChild(row);
+});
+}
+
+grandTotalEl.textContent = '₹ ' + grandTotal;
+}
+
+function checkout() {
+if(cart.length === 0) {
+alert("Your cart is empty!");
+return;
+}
+const total = document.getElementById('grandTotalValue').textContent;
+alert(`Order Placed Successfully!\nTotal Amount: ${total}`);
+cart = [];
+updateCartIcon();
+document.getElementById('cartPopup').style.display = 'none';
+}
+
+// --- NAVIGATION & DISPLAY ---
+
+function showOrderPage(foodCourtName) {
+document.getElementById('mainPage').style.display = 'none';
+
+const foodCourt = foodCourts[foodCourtName];
+if (!foodCourt) return;
+
+const orderPage = document.getElementById(foodCourt.pageId);
+const dishesContainer = orderPage.querySelector('.dishes-container');
+
+// Clear previous items to avoid duplicates
+dishesContainer.innerHTML = '';
+
+foodCourt.dishes.forEach(dish => {
+const dishCard = document.createElement('div');
+dishCard.className = 'dish-card';
+// Use placeholder if image is empty string
+const imgUrl = dish.image ? dish.image : 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+
+dishCard.innerHTML = `
+<div class="dish-image">
+<img src="${imgUrl}" alt="${dish.name}">
+</div>
+<h3 class="dish-name">${dish.name}</h3>
+<p class="dish-price">${dish.price}</p>
+<p class="rating">${dish.rating}</p>
+<div class="quantity-controls">
+<button class="quantity-btn minus">-</button>
+<span class="quantity-display">1</span>
+<button class="quantity-btn plus">+</button>
+</div>
+<button class="add-to-cart">Add to Cart</button>
+`;
+
+// Attach event listeners specifically for this card
+const minusBtn = dishCard.querySelector('.minus');
+const plusBtn = dishCard.querySelector('.plus');
+const qtyDisplay = dishCard.querySelector('.quantity-display');
+const addToCartBtn = dishCard.querySelector('.add-to-cart');
+
+minusBtn.addEventListener('click', () => {
+let currentQty = parseInt(qtyDisplay.textContent);
+if (currentQty > 1) {
+qtyDisplay.textContent = currentQty - 1;
+}
+});
+
+plusBtn.addEventListener('click', () => {
+let currentQty = parseInt(qtyDisplay.textContent);
+qtyDisplay.textContent = currentQty + 1;
+});
+
+addToCartBtn.addEventListener('click', () => {
+const currentQty = qtyDisplay.textContent;
+addToCart(dish.name, dish.price, currentQty);
+
+// Button Feedback Animation
+const originalText = addToCartBtn.textContent;
+addToCartBtn.textContent = "Added!";
+addToCartBtn.style.backgroundColor = "#4CAF50";
+setTimeout(() => {
+addToCartBtn.textContent = originalText;
+addToCartBtn.style.backgroundColor = "orange";
+}, 1000);
+});
+
+dishesContainer.appendChild(dishCard);
+});
+
+orderPage.style.display = 'block';
+
+// Scroll to top
+window.scrollTo(0,0);
+}
+
+function showMainPage() {
+document.getElementById('mainPage').style.display = 'block';
+
+// Hide all order pages
+const orderPages = document.querySelectorAll('.order-page');
+orderPages.forEach(page => {
+page.style.display = 'none';
+});
+
+// Scroll to top
+window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
+
